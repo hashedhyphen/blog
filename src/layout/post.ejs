@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ja">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8">
+    <title><%= metadata.title %> - Hashed Blog</title>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@hashedhyphen">
+    <meta property="og:title" content="<%= metadata.title %>">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://blog.hashedhyphen.com/posts/">
+    <meta property="og:image" content="https://hashedhyphen.com/img/logo.png">
+    <meta property="og:description" content="<%= metadata.description %>">
+    <meta property="og:site_name" content="Hashed Blog">
+  </head>
+  <body>
+    <main>
+      <article>
+<%- article %>
+      </article>
+    </main>
+  </body>
+</head>
