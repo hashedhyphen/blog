@@ -7,5 +7,11 @@ all: build
 build: $(MD_FILES)
 	node tools/build.js $^
 
+webpack:
+	$(NPM_BIN)/webpack --config webpack.config.js
+
+server:
+	$(NPM_BIN)/webpack-dev-server --content-base __build/
+
 clean:
 	$(NPM_BIN)/del -f __build
