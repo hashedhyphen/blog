@@ -37,16 +37,6 @@ function splitMetadata(data) {
   return { metadata, markdown };
 }
 
-function compileLayout(layout, metadata, markdown) {
-  return new Promise((resolve, reject) => {
-    fs.readFile('src/layout/post.ejs', 'utf8', (err, data) => {
-      if (err) { reject(err); }
-
-      const article = marked(markdown);
-      const html = ejs.render(data, { metadata, article });
-      saveAsHTML(html);
-    });
-  });
 }
 
 process.argv.slice(2).forEach(inputPath => {
