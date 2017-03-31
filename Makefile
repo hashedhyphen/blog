@@ -10,6 +10,9 @@ build: $(MD_FILES)
 webpack:
 	$(NPM_BIN)/webpack --config webpack.config.js
 
+lint:
+	$(NPM_BIN)/eslint tools/*.js
+
 server:
 	$(NPM_BIN)/webpack-dev-server --content-base __build/
 
