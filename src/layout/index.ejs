@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8">
+    <title>Hashed Blog</title>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@hashedhyphen">
+    <meta property="og:title" content="Hashed Blog">
+    <meta property="og:url" content="https://blog.hashedhyphen.com/posts/">
+    <meta property="og:image" content="https://hashedhyphen.com/img/logo.png">
+    <meta property="og:description" content="Hashed Hyphen's personal blog.">
+    <meta property="og:site_name" content="Hashed Blog">
+  </head>
+  <body>
+    <main>
+      <h1>Blog Posts</h1>
+      <ul>
+        <% stats.forEach(function(stat) { %>
+          <% const date = `${stat.year}-${stat.month}-${stat.day}`; %>
+          <li>
+            <time datetime="<%= date %>"><%= date %></time>
+            <a href="<%= stat.href %>"><%= stat.title %></a>
+          </li>
+        <% }); %>
+      </ul>
+    </main>
+  </body>
+</head>
